@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @election.name %>
+</p>
+
+<p>
+  <strong>Start at:</strong>
+  <%= @election.start_at %>
+</p>
+
+<p>
+  <strong>End at:</strong>
+  <%= @election.end_at %>
+</p>
+
+<p>
+  <strong>Settings:</strong>
+  <%= @election.settings %>
+</p>
+
+<%= link_to 'Edit', edit_election_path(@election) %> |
+<%= link_to 'Questions', election_questions_path(@election) %> |
+<%= link_to 'Voters', election_voters_path(@election) %> |
+<%= link_to 'Back', elections_path %>
