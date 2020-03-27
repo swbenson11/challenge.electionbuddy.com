@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Elections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Start at</th>
+      <th>End at</th>
+      <th>Settings</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @elections.each do |election| %>
+      <tr>
+        <td><%= election.name %></td>
+        <td><%= election.start_at %></td>
+        <td><%= election.end_at %></td>
+        <td><%= election.settings %></td>
+        <td><%= link_to 'Show', election_audit_path(election) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
